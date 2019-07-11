@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Leveller/2.unity
     guid: c1a6d355f65f4d24fb6a4889ee2370f7
+  - enabled: 1
+    path: Assets/Leveller/3.unity
+    guid: c9c81e132c7754c459ad3ff26722b2f1
+  - enabled: 1
+    path: Assets/Leveller/4.unity
+    guid: 9686a6537c26fa147969cea5b456d731
+  - enabled: 1
+    path: Assets/Leveller/5.unity
+    guid: d311f65c0806aa34a9e5a1246e03a956
   m_configObjects: {}

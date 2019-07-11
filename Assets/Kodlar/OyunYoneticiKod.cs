@@ -15,12 +15,18 @@ public class OyunYoneticiKod : MonoBehaviour
     public Text uc;
     public int Kactanekucukcemberolsun;
     bool kontrol = true;
+    string sonlevel;
 
     void Start()
     {
+        PlayerPrefs.SetInt("kayit", int.Parse(SceneManager.GetActiveScene().name));
+       
+
         donenCember = GameObject.FindGameObjectWithTag("donencembertag");
         anaCember = GameObject.FindGameObjectWithTag("anacembertag");
+
         DonencemberLevel.text = SceneManager.GetActiveScene().name;
+
         if( Kactanekucukcemberolsun <2)
         {
             bir.text = Kactanekucukcemberolsun + "";
@@ -77,7 +83,15 @@ public class OyunYoneticiKod : MonoBehaviour
             animator.SetTrigger("Yenilevel");
             yield return new WaitForSeconds(1.4f);
 
-            SceneManager.LoadScene(int.Parse(SceneManager.GetActiveScene().name) + 1);
+            if (SceneManager.GetActiveScene().name == "5")
+            {
+                OyunBitti();
+                PlayerPrefs.DeleteAll();
+            }
+            else
+            {
+                SceneManager.LoadScene(int.Parse(SceneManager.GetActiveScene().name) + 1);
+            }
         }
         
     }

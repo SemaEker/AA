@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class AnamenuKontrolKod : MonoBehaviour
 {
+   void Start()
+    {
+    //PlayerPrefs.DeleteAll();
+    }
+
     public void oyunaGit()
     {
-        SceneManager.LoadScene("Level1");
+        int Kayitlilevel = PlayerPrefs.GetInt("kayit");
+
+        if (Kayitlilevel == 0)
+        {
+            SceneManager.LoadScene(Kayitlilevel + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(Kayitlilevel);
+        }
+       
     }
 
     public void cik()

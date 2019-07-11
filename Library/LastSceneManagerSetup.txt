@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Leveller/3.unity
+- path: Assets/Leveller/Anamenu.unity
   isLoaded: 1
   isActive: 1
